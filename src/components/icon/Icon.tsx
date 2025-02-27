@@ -2,8 +2,7 @@ import React from 'react';
 import sprite from '../../assets/images/icons-sprite.svg'
 
 type iconPropsType = {
-    id: 'htmlSvg' | 'cssSvg' | 'figmaSvg' | 'instagrammSvg'
-    | 'reactSvg'| 'linkidnSvg'| 'quoteSvg' | 'stylecomponentsSvg' | 'telegrammSvg'
+    id: string
     width?: string
     height?: string
     viewBox?:string
