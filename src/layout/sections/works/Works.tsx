@@ -4,15 +4,15 @@ import {StyledSections} from "../skills/Skills.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Nav} from "../../../components/navigation/Nav.tsx";
 
-const worksItemss:Array<string> = ['All', "Landing Page",'React', 'SPA']
+const worksItemss: Array<string> = ['All', "Landing Page", 'React', 'SPA']
 
 
 export const Works = () => {
     return (
-     <StyledWorks>
-<SectionTitle>My works</SectionTitle>
-<Nav menuItems={worksItemss}/>
-     </StyledWorks>
+        <StyledWorks>
+            <SectionTitle>My works</SectionTitle>
+            <Nav menuItems={worksItemss}/>
+        </StyledWorks>
     );
 };
 
