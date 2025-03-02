@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
+
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {SkillItem} from "./skillItem/SkillItem.tsx";
+import {StyledSections} from "../../../components/StyledSections.tsx";
 export const mySkills = [
     {
         title: 'HTML',
@@ -52,12 +53,5 @@ export const Skills = () => {
         </StyledSections>
     );
 };
-export const StyledSections = styled.section`
-    background-color: #252527;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-`
 
