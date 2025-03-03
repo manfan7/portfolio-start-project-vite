@@ -11,7 +11,8 @@ type FlexWrapperTypes ={
 
 export const FlexWrapper = styled.div<FlexWrapperTypes>`
    display: flex;
-    width: ${({width})=>width || '1140px'};
+    height: 100%;
+    width: ${({width})=>width || 'auto'};
     flex-direction: ${({direction})=>direction || 'row'};
     justify-content: ${({justify})=>justify|| 'flex-start'};
     align-items: ${({align})=>align || 'stretch'};

@@ -4,7 +4,8 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {SkillItem} from "./skillItem/SkillItem.tsx";
-import {StyledSections} from "../../../components/StyledSections.tsx";
+import {Container} from "../../../components/Container.tsx";
+import styled from "styled-components";
 export const mySkills = [
     {
         title: 'HTML',
@@ -45,13 +46,18 @@ export const mySkills = [
 ]
 export const Skills = () => {
     return (
-        <StyledSections>
-            <SectionTitle>My Skills</SectionTitle>
-            <FlexWrapper wrap={'wrap'} justify={'space-between'} minHeight={'550px'}>
-                {mySkills.map(({title, description,id,keyId})=> <SkillItem iconId={id} title={title} description={description} key={keyId}/>)}
-            </FlexWrapper>
-        </StyledSections>
+        <SkillStyled>
+            <Container>
+                <SectionTitle><span>My Skills</span></SectionTitle>
+                <FlexWrapper wrap={'wrap'} justify={'space-between'} minHeight={'550px'}>
+                    {mySkills.map(({title, description,id,keyId})=> <SkillItem iconId={id} title={title} description={description} key={keyId}/>)}
+                </FlexWrapper>
+            </Container>
+
+        </SkillStyled>
     );
 };
 
+const SkillStyled = styled.section`
 
+`

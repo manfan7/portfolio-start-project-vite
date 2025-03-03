@@ -44,8 +44,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         color: ${theme.colors.textColor};
-
-
+        line-height: 1.2;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -57,12 +56,17 @@ export const GlobalStyles = createGlobalStyle`
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
     }
-section:nth-of-type(odd){
-    background-color: ${theme.colors.primaryBg};
-}
-section:nth-of-type(even){
-        background-color: ${theme.colors.secondaryBg}
-    ;
+
+    section {
+        padding: 100px 0;
+    }
+
+    section:nth-of-type(odd) {
+        background-color: ${theme.colors.primaryBg};
+    }
+
+    section:nth-of-type(even) {
+        background-color: ${theme.colors.secondaryBg};
     }
 
 

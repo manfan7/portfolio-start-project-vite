@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo.tsx";
+
 import {Nav} from "../../components/navigation/Nav.tsx";
 import {theme} from "../../styles/theme.tsx";
 import {Icon} from "../../components/icon/Icon.tsx";
@@ -8,7 +8,7 @@ const navigationItems:Array<string> = ['Home', "Skills",'Works', 'Testimony','Co
 export const Header = () => {
     return (
         <StyledHeader>
-            <Logo/>
+
             <Nav menuItems={navigationItems}/>
             <Icon id={'menuIcon'} width={'36'} height={'20'} viewBox={'0 0 36 20'}/>
         </StyledHeader>

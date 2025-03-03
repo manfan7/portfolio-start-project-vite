@@ -2,12 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {Nav} from "../../../components/navigation/Nav.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {WorkItem} from "./workItem/WorkItem.tsx";
 import socialNetwork from '../../../assets/images/social.png'
 import timer from '../../../assets/images/timer.png'
-import {StyledSections} from "../../../components/StyledSections.tsx";
+import {Container} from "../../../components/Container.tsx";
+import {TabMenu} from "./tabs/TabMenu.tsx";
+
 
 const worksItemss: Array<string> = ['All', "Landing Page", 'React', 'SPA']
 const worksInfo = [
@@ -28,14 +29,20 @@ const worksInfo = [
 export const Works = () => {
 
     return (
-        <StyledSections>
-            <SectionTitle>My works</SectionTitle>
-            <Nav menuItems={worksItemss}/>
+        <StyledSWorks>
+            <Container>
+                <SectionTitle><span>My works</span></SectionTitle>
+                <TabMenu menuItems={worksItemss}/>
 
-            <FlexWrapper justify={'space-between'}>
-                {worksInfo.map(({title,description,imageSrc},index)=><WorkItem title={title} imageSrc={imageSrc} description={description} key={index}/>)}
-            </FlexWrapper>
-        </StyledSections>
+                <FlexWrapper justify={'space-between'}>
+                    {worksInfo.map(({title,description,imageSrc},index)=><WorkItem title={title} imageSrc={imageSrc} description={description} key={index}/>)}
+                </FlexWrapper>
+            </Container>
+
+        </StyledSWorks>
     );
 };
 
+const StyledSWorks = styled.section`
+
+`

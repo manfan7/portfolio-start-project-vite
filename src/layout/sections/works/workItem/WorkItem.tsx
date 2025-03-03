@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import {ItemsTitle} from "../../../../components/ItemsTitle.tsx";
 import {ItemsDescr} from "../../../../components/ItemsDescr.tsx";
+import {Link} from "../../../../components/Link.tsx";
+
 type WorksItemProps = {
     imageSrc: string
     title: string
