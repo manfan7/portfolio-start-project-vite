@@ -8,10 +8,10 @@ type WorksItemProps = {
     description: string
 }
 
-export const WorkItem = ({imageSrc,title,description}:WorksItemProps) => {
+export const WorkItem = ({imageSrc, title, description}: WorksItemProps) => {
     return (
         <WorkItemStyles>
-<Image src={imageSrc} alt={''}></Image>
+            <Image src={imageSrc} alt={''}></Image>
             <ItemsTitle>{title}</ItemsTitle>
             <ItemsDescr>{description}</ItemsDescr>
             <Link href={'#'}>demo</Link>
@@ -21,24 +21,23 @@ export const WorkItem = ({imageSrc,title,description}:WorksItemProps) => {
 };
 
 const WorkItemStyles = styled.div`
-color: white;
+ ${Link} {
+    padding: 0;
+}
     max-width: 540px;
     width: 100%;
-    overflow: hidden;
+   
 `
 const Image = styled.img`
-width: 100%;
+    width: 100%;
     height: 260px;
     object-fit: cover;
-   
+
     transition: .4s;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
     }
 `
 
-const Link = styled.a`
-    text-decoration: none;
-    &:first-child{}
-    margin-right: 20px;
-`
+
