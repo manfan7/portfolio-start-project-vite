@@ -35,16 +35,19 @@ export const GlobalStyles = createGlobalStyle`
 
     a {
         text-decoration: none;
+        cursor: pointer;
     }
 
     button {
         background-color: unset;
         border: none;
+        cursor: pointer;
+        color: ${theme.colors.textColor};
     }
 
     body {
         color: ${theme.colors.textColor};
-        line-height: 1.2;
+        line-height: 1.4;
         font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -62,6 +65,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     section:nth-of-type(odd) {
+        background-color: ${theme.colors.primaryBg};
         background-color: ${theme.colors.primaryBg};
     }
 

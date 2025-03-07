@@ -20,7 +20,7 @@ const worksInfo = [
     },
     {
         title: 'Timer',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
+        description: 'Lorem ipsum dLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
         imageSrc: timer,
 
     },
@@ -34,7 +34,7 @@ export const Works = () => {
                 <SectionTitle><span>My works</span></SectionTitle>
                 <TabMenu menuItems={worksItemss}/>
 
-                <FlexWrapper justify={'space-between'}>
+                <FlexWrapper justify={'space-between'} align={'flex-start'}>
                     {worksInfo.map(({title,description,imageSrc},index)=><WorkItem title={title} imageSrc={imageSrc} description={description} key={index}/>)}
                 </FlexWrapper>
             </Container>

@@ -29,7 +29,5 @@ const StyledTab = styled.nav`
 
 
 
-const ListItem = styled.li`
-
-   
+const ListItem = styled.li`   
 `

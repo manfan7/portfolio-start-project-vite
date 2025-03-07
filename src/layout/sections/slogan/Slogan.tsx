@@ -1,15 +1,40 @@
 import React from 'react';
-import {StyledSections} from "../../../components/StyledSections.tsx";
+
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {Button} from "../../../components/Button.tsx";
+import styled from "styled-components";
+import {Container} from "../../../components/Container.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {theme} from "../../../styles/theme.tsx";
 
 
 export const Slogan = ({slogan}:{slogan:string}) => {
     return (
-<StyledSections>
-    <SectionTitle>{slogan}</SectionTitle>
-    <Button>Hire me</Button>
-</StyledSections>
+<SlogaStyled>
+    <Container>
+        <FlexWrapper align={'center'} direction={'column'}>
+            <SectionTitle>{slogan}</SectionTitle>
+            <Button>Hire me</Button>
+        </FlexWrapper>
+
+    </Container>
+</SlogaStyled>
     );
 };
+const SlogaStyled = styled.section`
+${SectionTitle} {
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 55px;
+        height: 1px;
+        left: 50%;
+        bottom: -30px;
+        transform: translateX(-50%);
+        background-color: ${theme.colors.itemsColor};
+    }
+}
+`
 

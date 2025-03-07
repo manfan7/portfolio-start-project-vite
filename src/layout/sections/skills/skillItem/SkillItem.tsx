@@ -36,7 +36,7 @@ const SkillStyled = styled.div`
         margin: 70px 0 15px;
     }
 `
-const IconWrapper= styled.div`
+export const IconWrapper= styled.div`
     position: relative;
 
     &:before {

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import {ItemsTitle} from "../../../../components/ItemsTitle.tsx";
 import {ItemsDescr} from "../../../../components/ItemsDescr.tsx";
 import {Link} from "../../../../components/Link.tsx";
+import {theme} from "../../../../styles/theme.tsx";
+import {Button} from "../../../../components/Button.tsx";
 
 type WorksItemProps = {
     imageSrc: string
@@ -13,11 +15,16 @@ type WorksItemProps = {
 export const WorkItem = ({imageSrc, title, description}: WorksItemProps) => {
     return (
         <WorkItemStyles>
+            <ImageWrapperSlider>
             <Image src={imageSrc} alt={''}></Image>
+                <Button>View Project</Button>
+            </ImageWrapperSlider>
+            <DescrWrapper>
             <ItemsTitle>{title}</ItemsTitle>
             <ItemsDescr>{description}</ItemsDescr>
             <Link href={'#'}>demo</Link>
             <Link href={'#'}>code</Link>
+            </DescrWrapper>
         </WorkItemStyles>
     );
 };
@@ -25,10 +32,18 @@ export const WorkItem = ({imageSrc, title, description}: WorksItemProps) => {
 const WorkItemStyles = styled.div`
  ${Link} {
     padding: 0;
+     &+${Link}{
+         margin-left: 20px;
+     }
 }
+    ${ItemsDescr} {
+        margin: 14px 0 10px;
+    }
+    
     max-width: 540px;
     width: 100%;
-   
+    
+    background-color: ${theme.colors.secondaryBg};
 `
 const Image = styled.img`
     width: 100%;
@@ -37,9 +52,40 @@ const Image = styled.img`
 
     transition: .4s;
 
-    &:hover {
-        transform: scale(1.1);
+   
+`
+const ImageWrapperSlider = styled.div`
+position: relative;
+    overflow: hidden;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: .4s;
+         }
+    &:hover{
+      ${Button}{
+          opacity: 1;
+      }
+        &:before{
+            background-color: rgba(0,0,0,0.3);
+            backdrop-filter: blur(4px);
+        }
+    }
+    ${Button}{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        &:before {
+            width: 100%;
+            height: 100%;
+        }
     }
 `
 
-
+const DescrWrapper= styled.div`
+padding: 25px 20px;
+`
