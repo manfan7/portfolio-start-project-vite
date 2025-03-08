@@ -17,5 +17,8 @@ export const FlexWrapper = styled.div<FlexWrapperTypes>`
     justify-content: ${({justify})=>justify|| 'flex-start'};
     align-items: ${({align})=>align || 'stretch'};
     flex-wrap: ${({wrap})=>wrap || 'nowrap'};;
-    min-height: ${({minHeight})=>minHeight || 'auto'};    
+    min-height: ${({minHeight})=>minHeight || 'auto'};
+    @media screen and (max-width:1223px) {
+        justify-content: space-around;
+    }
 `

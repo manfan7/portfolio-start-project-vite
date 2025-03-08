@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import {theme} from "../styles/theme.tsx";
+import {Font} from "../styles/Common.tsx";
 
 export const SectionTitle = styled.h2`
-    font-size: 36px;
-    font-family: "Josefin Sans", sans-serif;;
+    ${Font({family:"'Josefin Sans', sans-serif",weight: 600,Fmax:36,Fmin:30})}
     letter-spacing: 5px;
-    font-weight: 600;
     text-align: center;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 
     span {
         position: relative;
@@ -23,6 +22,9 @@ export const SectionTitle = styled.h2`
             bottom: -30px;
             transform: translateX(-50%);
             background-color: ${theme.colors.itemsColor};
+            @media ${theme.media.tablet} {
+                bottom: -24px;
+            }
         }
     }
 `

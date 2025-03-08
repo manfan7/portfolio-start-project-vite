@@ -28,8 +28,8 @@ export const Nav = ({menuItems,visible,onClick}:NavPropsTypes) => {
 
                 </ul>
             </FlexWrapper>
-            <StyledButton>
-                <Icon  onClick={onClick} id={'closeIcon'} width={"25"} height={"25"} viewBox={"0 0 25 25"}/>
+            <StyledButton onClick={onClick}>
+                <Icon   id={'closeIcon'} width={"25"} height={"25"} viewBox={"0 0 25 25"}/>
 
             </StyledButton>
         </StyledNav>
@@ -47,7 +47,7 @@ const StyledNav = styled.nav<StyledNavProps>`
     transition: .5s;
     height: 100vh;
     z-index: 10;
-    transform: ${({visible}) => (visible ? 'translateY(0)' : 'translateY(-180%)')};
+    transform: ${({visible}) => (visible ? 'translateY(0)' : 'translateY(-140%)')};
     background-color: ${theme.colors.secondaryBg};
 
     ul {
@@ -72,7 +72,7 @@ const StyledNav = styled.nav<StyledNavProps>`
             left: 0;
             right: 0;
             bottom: 0;
-
+            transition: 1.2s;
         }
     }
 `

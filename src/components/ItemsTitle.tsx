@@ -1,10 +1,9 @@
 import styled from "styled-components";
+import {Font} from "../styles/Common.tsx";
 
 
 export const ItemsTitle = styled.h3`
-    font-size: 16px;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 700;
+    ${Font({family:"'Josefin Sans', sans-serif",weight: 700,Fmax:16,Fmin:16})}
     text-transform: uppercase;
     
 `

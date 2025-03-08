@@ -39,9 +39,9 @@ const WorkItemStyles = styled.div`
     ${ItemsDescr} {
         margin: 14px 0 10px;
     }
-    
+    width: 330px;
     max-width: 540px;
-    width: 100%;
+   flex-grow: 1;
     
     background-color: ${theme.colors.secondaryBg};
 `
@@ -55,33 +55,48 @@ const Image = styled.img`
    
 `
 const ImageWrapperSlider = styled.div`
-position: relative;
+    position: relative;
     overflow: hidden;
-    &:before{
+
+    &:before {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
         transition: .4s;
-         }
-    &:hover{
-      ${Button}{
-          opacity: 1;
-      }
-        &:before{
-            background-color: rgba(0,0,0,0.3);
-            backdrop-filter: blur(4px);
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+    }
+
+    &:hover {
+        ${Button} {
+            opacity: 1;
+        }
+
+        &:before {
+            opacity: 1;
         }
     }
-    ${Button}{
+
+    ${Button} {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         opacity: 0;
+
         &:before {
             width: 100%;
             height: 100%;
+        }
+    }
+    @media  ${theme.media.tablet}, (hover: none),(pointer: coarse) {
+        ${Button}{
+            opacity: 1;
+        }
+        &:before {
+            opacity: 1;
         }
     }
 `

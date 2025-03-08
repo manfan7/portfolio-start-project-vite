@@ -6,6 +6,7 @@ import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {SkillItem} from "./skillItem/SkillItem.tsx";
 import {Container} from "../../../components/Container.tsx";
 import styled from "styled-components";
+import {theme} from "../../../styles/theme.tsx";
 export const mySkills = [
     {
         title: 'HTML',
@@ -59,5 +60,5 @@ export const Skills = () => {
 };
 
 const SkillStyled = styled.section`
-
+    background-color: ${theme.colors.secondaryBg}!important
 `

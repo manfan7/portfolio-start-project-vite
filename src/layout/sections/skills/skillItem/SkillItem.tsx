@@ -4,6 +4,8 @@ import styled from "styled-components";
 import {ItemsTitle} from "../../../../components/ItemsTitle.tsx";
 import {ItemsDescr} from "../../../../components/ItemsDescr.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {theme} from "../../../../styles/theme.tsx";
+
 
 
 
@@ -30,11 +32,15 @@ export const SkillItem = ({iconId, title, description}: SkillPropsType) => {
 
 const SkillStyled = styled.div`
 
-    width: 33.3%;
-    padding: 60px 20px 40px 20px;
+    width: 330px;
+    padding: 62px 20px 40px;
+    flex-grow:1 ;
     h3{
         margin: 70px 0 15px;
     }
+  @media  ${theme.media.mobile} {
+      padding: 62px 0px 40px;
+  }
 `
 export const IconWrapper= styled.div`
     position: relative;

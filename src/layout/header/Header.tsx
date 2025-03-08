@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 
 import {Nav} from "../../components/navigation/Nav.tsx";
 import {theme} from "../../styles/theme.tsx";
@@ -45,7 +45,16 @@ const StyledButton = styled.button`
     height: 36px;
     align-items: center;
 `
-
+export const fadeOut = keyframes`
+  from {
+    opacity: 1;
+    
+  }
+  to {
+    opacity: 0;
+   
+  }
+`;
 
 const StyledHeader = styled.header<StyledNavProps>`
     background-color: ${theme.colors.primaryBg};
@@ -54,10 +63,11 @@ const StyledHeader = styled.header<StyledNavProps>`
     padding-right: 15px;
     justify-content: flex-end;
     position: sticky;
-    display: ${({visible}) => visible && 'none'};
     top: 0;
     width: 100%;
     height: 60px;
+    
+    ${({ visible }) => visible && css`animation: ${fadeOut} 1s forwards;`}
     z-index: 10;
     align-items: center;
     overflow: hidden;

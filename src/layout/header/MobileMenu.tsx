@@ -2,7 +2,8 @@ import styled, {css} from "styled-components";
 
 
 import {theme} from "../../styles/theme.tsx";
-import {StyledNavProps} from "./Header.tsx";
+import {fadeOut, StyledNavProps} from "./Header.tsx";
+
 
 
 
@@ -40,6 +41,7 @@ const BurgerButton = styled.button<{visible:boolean}>`
         ${({visible})=>visible && css<{visible:boolean}>`
         background-color: rgba(255,255,255,0);
         `}
+        ${({ visible }) => visible && css`animation: ${fadeOut} 1s forwards;`}
         &:before{
         content: '';
             display: block;
@@ -53,6 +55,7 @@ const BurgerButton = styled.button<{visible:boolean}>`
         transform: rotate(-45deg) translateY(0);
                 
         `}
+            ${({ visible }) => visible && css`animation: ${fadeOut} 1s forwards;`}
     }
         &:after{
             content: '';
@@ -69,6 +72,8 @@ const BurgerButton = styled.button<{visible:boolean}>`
                 width: 36px;
         `}
         }
+        ${({ visible }) => visible && css`animation: ${fadeOut} 1s forwards;`}
+
     }
 `
 
@@ -80,7 +85,8 @@ const MobileHeadeWrapperr = styled.header<StyledNavProps>`
     padding-right: 15px;
     justify-content: flex-end;
     position: sticky;
-    display: ${({visible}) => visible && 'none'};
+    animation-delay: .5s;
+    border-bottom: 1px solid #1f1f20;
     top: 0;
     width: 100%;
     height: 60px;
@@ -95,6 +101,6 @@ const MobileHeadeWrapperr = styled.header<StyledNavProps>`
     @media ${theme.media.tablet} {
         display: flex;
     }
-
+    
 
 `

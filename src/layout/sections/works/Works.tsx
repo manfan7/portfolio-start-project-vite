@@ -34,7 +34,7 @@ export const Works = () => {
                 <SectionTitle><span>My works</span></SectionTitle>
                 <TabMenu menuItems={worksItemss}/>
 
-                <FlexWrapper justify={'space-between'} align={'flex-start'}>
+                <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={'wrap'}>
                     {worksInfo.map(({title,description,imageSrc},index)=><WorkItem title={title} imageSrc={imageSrc} description={description} key={index}/>)}
                 </FlexWrapper>
             </Container>
@@ -44,5 +44,7 @@ export const Works = () => {
 };
 
 const StyledSWorks = styled.section`
-
+${FlexWrapper}{
+    gap: 30px;
+}
 `

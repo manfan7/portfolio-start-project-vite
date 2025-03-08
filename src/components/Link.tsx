@@ -1,10 +1,10 @@
 import {theme} from "../styles/theme.tsx";
 import styled from "styled-components";
+import {Font} from "../styles/Common.tsx";
 
 export const Link = styled.a`
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+    ${Font({family:"'Josefin Sans', sans-serif",weight: 400,Fmax:14,Fmin:14})}
+   
     letter-spacing: 1px;
     position: relative;
     text-transform: uppercase;
