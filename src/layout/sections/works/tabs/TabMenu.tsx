@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+
 import {Link} from "../../../../components/Link.tsx";
 import {NavPropsTypes} from "../../../header/Header.tsx";
 
