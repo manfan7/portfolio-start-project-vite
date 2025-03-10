@@ -5,7 +5,7 @@ import {ItemsTitle} from "../ItemsTitle.tsx";
 import {FlexWrapper} from "../FlexWrapper.tsx";
 import {theme} from "../../styles/theme.tsx";
 
-export const Slider = () => {
+export const Slider:React.FC = () => {
     return (
         <StyledSlider>
             <FlexWrapper width={'auto'}>
@@ -26,12 +26,17 @@ export const Slider = () => {
     );
 };
 
+
+
+
+
+
 const StyledSlider = styled.div`
     max-width: 500px;
     ${ItemsTitle}{
         font-weight: 600;
       letter-spacing: 1px;
-        margin: 22px 0 42px;
+        margin: 22px 0 34px;
         display: inline-block;
     }
 `

@@ -24,12 +24,16 @@ export const Link = styled.a`
         left: 0;
         background-color: ${theme.colors.itemsColor};
         transform: scale(0);
+        @media ${theme.media.mobile} {
+            bottom: 5px;
+        }
     }
 
     &:hover {
         &:before {
             transform: scale(1);
         }
+       
     }
 
 `

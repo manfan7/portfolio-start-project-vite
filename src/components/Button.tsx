@@ -12,6 +12,7 @@ export const Button = styled.button`
     text-transform: uppercase;
     position: relative;
     z-index: 2;
+    cursor: pointer;
 &:before{
     content: '';
     display: inline-block;

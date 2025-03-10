@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./theme.tsx";
+import {style} from "../layout/sections/main/Main_styles.tsx";
 
 export const GlobalStyles = createGlobalStyle`
     *, *:before, *:after {
@@ -21,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
-        cursor: pointer;
+     
         color: ${theme.colors.textColor};
     }
 
@@ -33,6 +34,7 @@ export const GlobalStyles = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        min-width: 360px;
     }
 
    
@@ -42,13 +44,15 @@ export const GlobalStyles = createGlobalStyle`
 
     section:nth-of-type(even) {
         background-color: ${theme.colors.primaryBg};
-      
+        
     }
 
     section:nth-of-type(odd) {
         background-color: ${theme.colors.secondaryBg};
     }
-    
+   ${style.MainStyled} {
+       background-color: ${theme.colors.primaryBg}!important;
+   }
 
 @media ${theme.media.tablet} {
     section{

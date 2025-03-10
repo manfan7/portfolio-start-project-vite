@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from "styled-components";
 
+import {style} from './Wotks_styles.tsx'
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {WorkItem} from "./workItem/WorkItem.tsx";
@@ -8,6 +8,7 @@ import socialNetwork from '../../../assets/images/social.png'
 import timer from '../../../assets/images/timer.png'
 import {Container} from "../../../components/Container.tsx";
 import {TabMenu} from "./tabs/TabMenu.tsx";
+
 
 
 const worksItemss: Array<string> = ['All', "Landing Page", 'React', 'SPA']
@@ -26,12 +27,12 @@ const worksInfo = [
     },
 ]
 
-export const Works = () => {
+export const Works:React.FC = () => {
 
     return (
-        <StyledSWorks>
+        <style.StyledSWorks>
             <Container>
-                <SectionTitle><span>My works</span></SectionTitle>
+                <SectionTitle><span>My Works</span></SectionTitle>
                 <TabMenu menuItems={worksItemss}/>
 
                 <FlexWrapper justify={'space-between'} align={'flex-start'} wrap={'wrap'}>
@@ -39,12 +40,7 @@ export const Works = () => {
                 </FlexWrapper>
             </Container>
 
-        </StyledSWorks>
+        </style.StyledSWorks>
     );
 };
 
-const StyledSWorks = styled.section`
-${FlexWrapper}{
-    gap: 30px;
-}
-`

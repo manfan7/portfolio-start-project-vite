@@ -5,11 +5,11 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {SkillItem} from "./skillItem/SkillItem.tsx";
 import {Container} from "../../../components/Container.tsx";
-import styled from "styled-components";
-import {theme} from "../../../styles/theme.tsx";
+import {style} from './Skills_style.tsx'
+
 export const mySkills = [
     {
-        title: 'HTML',
+        title: 'HTML5',
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim',
         id: 'htmlSvg',
         keyId:'1'
@@ -45,9 +45,9 @@ export const mySkills = [
         keyId:'6'
     }
 ]
-export const Skills = () => {
+export const Skills:React.FC = () => {
     return (
-        <SkillStyled>
+        <style.SkillStyled>
             <Container>
                 <SectionTitle><span>My Skills</span></SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'} minHeight={'550px'}>
@@ -55,10 +55,8 @@ export const Skills = () => {
                 </FlexWrapper>
             </Container>
 
-        </SkillStyled>
+        </style.SkillStyled>
     );
 };
 
-const SkillStyled = styled.section`
-    background-color: ${theme.colors.secondaryBg}!important
-`
+

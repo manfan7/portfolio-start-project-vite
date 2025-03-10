@@ -4,9 +4,9 @@ import {Font} from "../styles/Common.tsx";
 
 export const SectionTitle = styled.h2`
     ${Font({family:"'Josefin Sans', sans-serif",weight: 600,Fmax:36,Fmin:30})}
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 
     span {
         position: relative;
@@ -26,5 +26,9 @@ export const SectionTitle = styled.h2`
                 bottom: -24px;
             }
         }
+    }
+    @media ${theme.media.mobile} {
+        margin-bottom: 45px;
+        letter-spacing: 5px;
     }
 `
