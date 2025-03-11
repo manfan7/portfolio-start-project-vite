@@ -18,6 +18,7 @@ const fadeOut = keyframes`
     }
     to {
         opacity: 0;
+        top: 100px;
 
     }
 `;
@@ -73,9 +74,7 @@ const BurgerButton = styled.button<NavPropsTypes>`
         left: 0px;
         bottom: 0px;
 
-        ${({visible}) => visible && css<{ visible: boolean }>`
-            background-color: rgba(255, 255, 255, 0);
-        `}
+        ${({visible}) => visible && css`background-color: rgba(255, 255, 255, 0);`}
         ${({visible}) => visible && css`animation: ${fadeOut} 1s forwards;`}
         &:before {
             content: '';

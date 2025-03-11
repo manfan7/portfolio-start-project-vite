@@ -22,10 +22,14 @@ const StyledNav = styled.nav<NavPropsTypes>`
 
     ${StyledButton} {
         position: absolute;
+        width: 30px;
+        height: 30px;
         top: 30px;
         right: 20px;
         cursor: pointer;
-
+        display: flex;align-items: center;
+        justify-content: center;
+        
     }
 
     @media ${theme.media.tablet} {

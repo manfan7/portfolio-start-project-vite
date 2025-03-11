@@ -11,7 +11,7 @@ import {style} from'./Nav_styles.tsx'
 export const Nav:React.FC<NavPropsTypes> = ({menuItems, visible, onClick}: NavPropsTypes) => {
 
     return (
-        <style.StyledNav visible={visible} aria-modal='true'>
+        <style.StyledNav visible={visible} aria-modal='true' onClick={onClick}>
             <FlexWrapper align={'center'} justify={'center'}>
 
                 <ul>
@@ -25,11 +25,10 @@ export const Nav:React.FC<NavPropsTypes> = ({menuItems, visible, onClick}: NavPr
                             </style.Mask>
                         </style.Link>
                     </style.ListItem>)}
-
-                </ul>
+               </ul>
             </FlexWrapper>
-            <style.StyledButton onClick={onClick}>
-                <Icon id={'closeIcon'} width={"25"} height={"25"} viewBox={"0 0 25 25"}/>
+            <style.StyledButton >
+                <Icon  id={'closeIcon'} width={"25"} height={"25"} viewBox={"0 0 25 25"}/>
             </style.StyledButton>
         </style.StyledNav>
     );

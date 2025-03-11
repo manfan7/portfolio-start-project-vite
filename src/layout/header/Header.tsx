@@ -7,9 +7,10 @@ import {DesctopHeader} from "./DesctopMenu.tsx";
 import {useHandleClick} from "./UseHandleClick.tsx";
 
 export type NavPropsTypes = {
-    menuItems?: string[] | undefined;
+    menuItems?: Array<string>;
     visible?: boolean
     onClick?: () => void
+    active?:boolean
 }
 
 const navigationItems: Array<string> = ['Home', "Skills", 'Works', 'Testimony', 'Contact']

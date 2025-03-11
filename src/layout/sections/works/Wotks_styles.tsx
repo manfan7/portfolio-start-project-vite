@@ -5,6 +5,7 @@ import {Link} from "../../../components/Link.tsx";
 import {ItemsDescr} from "../../../components/ItemsDescr.tsx";
 import {Button} from "../../../components/Button.tsx";
 
+
 const StyledSWorks = styled.section`
     padding-bottom: 115px;
 ${FlexWrapper}{
@@ -23,22 +24,29 @@ ${FlexWrapper}{
 
 // workItem
 
+
+
 const WorkItemStyles = styled.div`
- ${Link} {
-    padding: 0;
-     &+${Link}{
-         margin-left: 20px;
-     }
-}
+
+ 
+    ${Link} {
+        padding: 0;
+
+        & + ${Link} {
+            margin-left: 20px;
+        }
+    }
+
     ${ItemsDescr} {
         margin: 14px 0 10px;
         @media ${theme.media.tablet} {
             letter-spacing: 1px;
         }
     }
+    
     width: 330px;
     max-width: 540px;
-   flex-grow: 1;
+    flex-grow: 1;
     background-color: ${theme.colors.secondaryBg};
     
 `
@@ -51,7 +59,7 @@ const Image = styled.img`
     @media ${theme.media.tablet} {
         height: 270px;
     }
-   
+
 `
 const ImageWrapperSlider = styled.div`
     position: relative;

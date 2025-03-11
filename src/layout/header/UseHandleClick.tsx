@@ -6,6 +6,7 @@ export const useHandleClick = () => {
     const breakPoint = 768
     const handleOnclick = () => {
         setVisible(visible => !visible)
+
     }
     useEffect(() => {
         const handleWindowResize= ()=>{setWidth(window.innerWidth)}

@@ -1,10 +1,11 @@
 import {theme} from "../styles/theme.tsx";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {Font} from "../styles/Common.tsx";
 
-export const Link = styled.a`
-    ${Font({family:"'Josefin Sans', sans-serif",weight: 400,Fmax:14,Fmin:14})}
-   
+export const Link = styled.a<{active:boolean}>`
+    
+    ${Font({family: "'Josefin Sans', sans-serif", weight: 400, Fmax: 14, Fmin: 14})};
+    cursor: pointer;
     letter-spacing: 1px;
     position: relative;
     text-transform: uppercase;
@@ -23,7 +24,8 @@ export const Link = styled.a`
         width: 100%;
         left: 0;
         background-color: ${theme.colors.itemsColor};
-        transform: scale(0);
+        transform: ${({ active }) => (active ? 'scale(1)' : 'scale(0)')};
+        
         @media ${theme.media.mobile} {
             bottom: 5px;
         }
@@ -32,8 +34,9 @@ export const Link = styled.a`
     &:hover {
         &:before {
             transform: scale(1);
+            
         }
-       
+
     }
 
 `
