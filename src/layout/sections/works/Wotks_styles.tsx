@@ -64,7 +64,7 @@ const Image = styled.img`
 const ImageWrapperSlider = styled.div`
     position: relative;
     overflow: hidden;
-
+    
     &:before {
         content: '';
         position: absolute;
@@ -79,6 +79,7 @@ const ImageWrapperSlider = styled.div`
     &:hover {
         ${Button} {
             opacity: 1;
+            top: 50%;
         }
 
         &:before {
@@ -90,7 +91,7 @@ const ImageWrapperSlider = styled.div`
         cursor: pointer;
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 60%;
         transform: translate(-50%, -50%);
         opacity: 0;
 
@@ -102,6 +103,7 @@ const ImageWrapperSlider = styled.div`
     @media  ${theme.media.tablet}, (hover: none),(pointer: coarse) {
         ${Button}{
             opacity: 1;
+            top: 51%;
         }
         &:before {
             opacity: 1;
@@ -111,21 +113,35 @@ const ImageWrapperSlider = styled.div`
 
 const DescrWrapper= styled.div`
 padding: 22px 20px;
+    ${Link}{
+        &:before{
+            bottom: -5px;
+        }
+    }
 `
 
 
 
 //tabmenu
 const StyledTab = styled.nav`
-  
+
 
     ul {
         display: flex;
-       
+
         justify-content: space-between;
         max-width: 352px;
         width: 100%;
-        margin:0 auto 45px
+        margin: 0 auto 45px
+    }
+
+    @media ${theme.media.mobile} {
+        // ${Link} {
+        //     &:before {
+        //         bottom: -5px;
+        //
+        //     }
+        // }
     }
 `
 

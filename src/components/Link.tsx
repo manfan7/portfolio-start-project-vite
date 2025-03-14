@@ -1,5 +1,5 @@
 import {theme} from "../styles/theme.tsx";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import {Font} from "../styles/Common.tsx";
 
 export const Link = styled.a<{active:boolean}>`
@@ -19,16 +19,14 @@ export const Link = styled.a<{active:boolean}>`
         position: absolute;
         height: 10px;
         display: inline-block;
-        bottom: -5px;
+        bottom: 5px;
         z-index: -1;
         width: 100%;
         left: 0;
         background-color: ${theme.colors.itemsColor};
         transform: ${({ active }) => (active ? 'scale(1)' : 'scale(0)')};
         
-        @media ${theme.media.mobile} {
-            bottom: 5px;
-        }
+       
     }
 
     &:hover {

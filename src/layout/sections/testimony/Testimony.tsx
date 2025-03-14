@@ -11,7 +11,7 @@ import {style} from "../skills/Skills_style.tsx";
 
 export const Testimony:React.FC = () => {
     return (
-        <StyledTestimony>
+        <StyledTestimony id={'Testimony'}>
             <Container>
             <SectionTitle><span>Testimony</span></SectionTitle>
             <FlexWrapper direction={'column'} justify={'center'} align={'center'}>
@@ -28,6 +28,7 @@ export const Testimony:React.FC = () => {
     );
 };
 const StyledTestimony = styled.section`
+    position: relative;
     padding-bottom: 71px;
 ${style.IconWrapper} {
     margin:48px 0 67px;

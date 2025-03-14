@@ -1,28 +1,44 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/theme.tsx";
 import {Font} from "../../../styles/Common.tsx";
-
+import bgImage from '../../../assets/images/IMG20231.jpg'
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 const ImageContainer = styled.img`
-object-fit: cover;
-   
+    object-fit: cover;
+    box-shadow: 0px 4px 25px 2px black, 0px 4px 25px 2px inset black;
+   backdrop-filter: saturate(231%) blur(1px);
     width: 350px;
     height: 430px;
     @media ${theme.media.mobile} {
         width: 310px;
         height: 370px;
     }
-    
+
 `
 
 const MainStyled = styled.section`
-       display: flex;
+  
+
+    display: flex;
     min-height: 100vh;
+
+    & .parallax-effect-img {
+        background-image: url(${bgImage});
+    }
+  
+        overflow: hidden;
     
+
 `
 const TextStyled = styled.h1`
     ${Font({weight: 400, Fmax: 27, Fmin: 20})}
-    
     text-align: start;
+    &>span{
+        display: none;
+    }
+    @media ${theme.media.mobile} {
+        margin-bottom: 74px;
+    }
 `
 const StyledName = styled.h2`
     ${Font({family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 50, Fmin: 36})}
@@ -55,6 +71,9 @@ const StyledName = styled.h2`
         margin: 15px 0 22px;
         padding-right: 10px;
         text-align: start;
+        ${FlexWrapper} {
+            justify-content: center;
+        }
     }
 `
 const StyledWelcome = styled.span`
@@ -79,18 +98,13 @@ const PhotoWrapper = styled.div`
 
         @media ${theme.media.mobile} {
             width: 314px;
-            height: 421px;
-            top: -30px;
-            left: 22px;
+            height: 416px;
+            top: -20px;
+            left: 12px;
         }
     }
 
-    @media screen and (max-width: 1223px) {
-        margin-right: 20px;
-    }
-    @media ${theme.media.mobile} {
-        margin-top: 74px;
-    }
+   
 `
 
 

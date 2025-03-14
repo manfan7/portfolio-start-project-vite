@@ -5,6 +5,7 @@ import {Container} from "../../components/Container.tsx";
 import {style} from "./Footer_styles.tsx";
 
 
+
 const footerLinkList = [
     {
         social: 'instagrammSvg',

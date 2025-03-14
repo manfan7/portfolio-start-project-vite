@@ -16,14 +16,14 @@ export const Nav:React.FC<NavPropsTypes> = ({menuItems, visible, onClick}: NavPr
 
                 <ul>
                     {menuItems.map((item: string, index: number) => <style.ListItem key={index}>
-                        <style.Link href="">{item}
+                        <style.LinkItem to={`${item}`} smooth={true} onClick={onClick}>{item}
                             <style.Mask>
                                 <span>{item}</span>
                             </style.Mask>
                             <style.Mask>
                                 <span>{item}</span>
                             </style.Mask>
-                        </style.Link>
+                        </style.LinkItem>
                     </style.ListItem>)}
                </ul>
             </FlexWrapper>

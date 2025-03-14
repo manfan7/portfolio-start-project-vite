@@ -47,7 +47,7 @@ export const mySkills = [
 ]
 export const Skills:React.FC = () => {
     return (
-        <style.SkillStyled>
+        <style.SkillStyled id={'Skills'}>
             <Container>
                 <SectionTitle><span>My Skills</span></SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'} minHeight={'550px'}>

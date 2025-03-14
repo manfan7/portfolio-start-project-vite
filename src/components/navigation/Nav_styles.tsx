@@ -2,6 +2,7 @@ import {theme} from "../../styles/theme.tsx";
 import styled from "styled-components";
 import {NavPropsTypes} from "../../layout/header/Header.tsx";
 import {Font} from "../../styles/Common.tsx";
+import {Link} from "react-scroll";
 
 const StyledButton = styled.button``
 const StyledNav = styled.nav<NavPropsTypes>`
@@ -64,7 +65,7 @@ const Mask = styled.span`
     }
 
 `
-const Link = styled.a`
+const LinkItem = styled(Link)`
     ${Font({family:"'Josefin Sans', sans-serif",weight:400,Fmax:50,Fmin:36})}
     
     line-height: 1.1;
@@ -106,5 +107,5 @@ const ListItem = styled.li`
 
 `
 export const style = {
-    Link, ListItem, StyledNav,StyledButton,Mask
+    LinkItem, ListItem, StyledNav,StyledButton,Mask
 }

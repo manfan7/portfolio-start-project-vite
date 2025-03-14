@@ -9,7 +9,7 @@ import {style} from './Contacts_styles.tsx'
 
 export const Contacts:React.FC = () => {
     return (
-        <style.ContactsStyled>
+        <style.ContactsStyled id={'Contact'}>
             <Container>
                 <SectionTitle><span>Contacts</span></SectionTitle>
                 <style.FormStyled>

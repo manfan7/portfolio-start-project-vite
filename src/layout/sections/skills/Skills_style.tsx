@@ -35,7 +35,7 @@ const SkillItemStyled = styled.div`
     }
 `
  const SkillStyled = styled.section`
-
+position: relative;
 `
 export const style ={
     SkillStyled,IconWrapper,SkillItemStyled

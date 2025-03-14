@@ -56,13 +56,15 @@ const StyledHeader = styled.header<NavPropsTypes>`
 `
 
 //mobile
-const BurgerButton = styled.button<NavPropsTypes>`
+const BurgerButton = styled.button<NavPropsTypes & {opacity:number}>`
     position: fixed;
     width: 200px;
+    opacity: ${({opacity})=>opacity};
+    display: ${({opacity})=>opacity===0 ? 'none': 'block'};
     height: 200px;
     top: -100px;
     right: -100px;
-
+z-index: 5;
     span {
 
         display: block;
@@ -86,10 +88,10 @@ const BurgerButton = styled.button<NavPropsTypes>`
             transition: .4s;
             transform: translateY(-10px);
             ${({visible}) => visible && css`
-                transform: rotate(-45deg) translateY(0);
-
+                transform: rotate(-45deg) ;
+                animation: ${fadeOut} 1s forwards
             `}
-            ${({visible}) => visible && css`animation: ${fadeOut} 1s forwards;`}
+        
         }
 
         &:after {
@@ -103,7 +105,7 @@ const BurgerButton = styled.button<NavPropsTypes>`
             transition: .4s;
             transform: translateY(10px);
             ${({visible}) => visible && css`
-                transform: rotate(45deg) translateY(0);
+                transform: rotate(45deg) ;
                 width: 36px;
             `}
         }
@@ -124,6 +126,7 @@ const MobileHeadeWrapperr = styled.header`
     animation-delay: .5s;
     border-bottom: 1px solid #1f1f20;
     top: 0;
+    z-index: 10;
     width: 100%;
     height: 28px;
     align-items: center;
