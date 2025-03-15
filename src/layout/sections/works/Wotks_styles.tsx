@@ -44,9 +44,9 @@ const WorkItemStyles = styled.div`
         }
     }
     
-    width: 330px;
-    max-width: 540px;
-    flex-grow: 1;
+    //width: 330px;
+    //max-width: 540px;
+    //flex-grow: 1;
     background-color: ${theme.colors.secondaryBg};
     
 `
@@ -101,7 +101,7 @@ const ImageWrapperSlider = styled.div`
         }
     }
     @media  ${theme.media.tablet}, (hover: none),(pointer: coarse) {
-        ${Button}{
+       ${Button} {
             opacity: 1;
             top: 51%;
         }
@@ -144,7 +144,6 @@ const StyledTab = styled.nav`
         // }
     }
 `
-
 
 
 const ListItem = styled.li`   

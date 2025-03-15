@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-
+import image1 from'../../assets/images/flamingo.jpg'
+import image2 from'../../assets/images/Manchester_United_logo.png'
 import {
     type Container,
     type ISourceOptions,
@@ -41,7 +42,7 @@ export const Partical = () => {
             //         value: "rgba(3,9,18,0.01)",
             //     },
             // },
-            fpsLimit: 120,
+            fpsLimit: 30,
             interactivity: {
                 events: {
                     onClick: {
@@ -88,14 +89,28 @@ export const Partical = () => {
                 number: {
                     density: {
                         enable: true,
+                        value_area: 800,
                     },
-                    value: 120,
+                    value: 90,
                 },
                 opacity: {
                     value: 1,
                 },
                 shape: {
-                    type: "circle",
+                    type: ["circle","image"],
+                    "image": [
+                        {
+                            "src":{image1} ,
+                            "height": 20,
+                            "width": 23
+                        },
+                        {
+                            "src": {image2},
+                            "height": 20,
+                            "width": 23
+                        }
+
+                        ]
 
                 },
 

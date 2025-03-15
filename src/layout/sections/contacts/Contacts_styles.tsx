@@ -5,9 +5,11 @@ const ContactsStyled = styled.section`
     h2 {
         margin-bottom: 90px;
     }
+    
 `
 
 const FormStyled = styled.form`
+    position: relative;
     max-width: 540px;
     width: 100%;
     display: flex;

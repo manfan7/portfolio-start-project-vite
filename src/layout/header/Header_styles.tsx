@@ -60,7 +60,7 @@ const BurgerButton = styled.button<NavPropsTypes & {opacity:number}>`
     position: fixed;
     width: 200px;
     opacity: ${({opacity})=>opacity};
-    display: ${({opacity})=>opacity===0 ? 'none': 'block'};
+    display: ${({opacity})=>opacity<0.2 ? 'none': 'block'};
     height: 200px;
     top: -100px;
     right: -100px;

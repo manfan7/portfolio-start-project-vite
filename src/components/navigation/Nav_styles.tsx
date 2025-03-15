@@ -6,13 +6,14 @@ import {Link} from "react-scroll";
 
 const StyledButton = styled.button``
 const StyledNav = styled.nav<NavPropsTypes>`
+
     position: absolute;;
     width: 100%;
     left: 0;
     transition: .5s;
     height: 100vh;
     z-index: 10;
-    transform: ${({visible}) => (visible ? 'translateY(0)' : 'translateY(-140%)')};
+
     background-color: ${theme.colors.secondaryBg};
 
     ul {
@@ -28,13 +29,18 @@ const StyledNav = styled.nav<NavPropsTypes>`
         top: 30px;
         right: 20px;
         cursor: pointer;
-        display: flex;align-items: center;
+        display: flex;
+        align-items: center;
         justify-content: center;
         
     }
 
+    @media screen and (min-width: 769px) {
+        transform: ${({visible, scrollHeight}) => (visible ? `translateY(${scrollHeight}px)` : 'translateY(-140%)')};
+    }
     @media ${theme.media.tablet} {
         position: fixed;
+        transform: ${({visible}) => (visible ? `translateY(0px)` : 'translateY(-140%)')};
         background-color: rgba(31, 31, 32, 0.9);
         top: 0;
         left: 0;

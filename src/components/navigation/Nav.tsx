@@ -8,14 +8,14 @@ import {style} from'./Nav_styles.tsx'
 
 
 
-export const Nav:React.FC<NavPropsTypes> = ({menuItems, visible, onClick}: NavPropsTypes) => {
+export const Nav:React.FC<NavPropsTypes> = ({menuItems, visible, onClick,scrollHeight}: NavPropsTypes) => {
 
     return (
-        <style.StyledNav visible={visible} aria-modal='true' onClick={onClick}>
+        <style.StyledNav scrollHeight={scrollHeight} visible={visible} aria-modal='true' onClick={onClick}>
             <FlexWrapper align={'center'} justify={'center'}>
 
                 <ul>
-                    {menuItems.map((item: string, index: number) => <style.ListItem key={index}>
+                    {menuItems && menuItems.map((item: string, index: number) => <style.ListItem key={index}>
                         <style.LinkItem to={`${item}`} smooth={true} onClick={onClick}>{item}
                             <style.Mask>
                                 <span>{item}</span>

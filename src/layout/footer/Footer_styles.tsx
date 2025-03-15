@@ -3,10 +3,10 @@ import styled from "styled-components";
 import {Font} from "../../styles/Common.tsx";
 
 const StyledFooter = styled.footer`
+   
     background-color: ${theme.colors.primaryBg};
     padding: 40px 0px;
-position: relative;
-    z-index: -1;
+
 `
 const Name = styled.span`
     ${Font({family:"'Josefin Sans', sans-serif",weight:700,Fmax:22,Fmin:16})}
@@ -17,12 +17,19 @@ const SocialList = styled.ul`
     margin: 30px 0;
     display: flex;
     gap: 20px;
+    position: relative;
 `
 const SocialLiItem = styled.li`
-
+    cursor: pointer;
+    &:hover a{
+        background-color: ${theme.colors.itemsColor};
+        color: ${theme.colors.primaryBg};
+        transform: translateY(-4px);
+    }
 `
 const SocialLink = styled.a`
     background-color: #252527;
+    z-index: 10;
     border-radius: 50%;
     width: 35px;
     height: 35px;

@@ -15,7 +15,7 @@ export const TabMenu:React.FC<NavPropsTypes & ChangeStatusFunctionPropsType> = (
         <style.StyledTab>
             <ul>
 
-                {menuItems.map((item,index)=> <style.ListItem key={index}>
+                {menuItems && menuItems.map((item,index)=> <style.ListItem key={index}>
                     <Link active={item.toUpperCase()===currentFilterStatus.toUpperCase()} as={'button'} onClick={()=>changeItems(item)}>{item}</Link>
                 </style.ListItem>)}
             </ul>

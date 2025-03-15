@@ -6,7 +6,7 @@ import {ItemsDescr} from "../../../../components/ItemsDescr.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {style} from "../Skills_style.tsx";
 
-
+import { Fade } from "react-awesome-reveal";
 
 
 
@@ -18,6 +18,7 @@ type SkillPropsType = {
 
 export const SkillItem:React.FC<SkillPropsType> = ({iconId, title, description}: SkillPropsType) => {
     return (
+        <Fade cascade={true}  direction={'up'}>
         <style.SkillItemStyled>
             <FlexWrapper direction={'column'} align={'center'}>
                 <style.IconWrapper>
@@ -26,8 +27,8 @@ export const SkillItem:React.FC<SkillPropsType> = ({iconId, title, description}:
                 <ItemsTitle>{title}</ItemsTitle>
                 <ItemsDescr>{description}</ItemsDescr>
             </FlexWrapper>
-
         </style.SkillItemStyled>
+        </Fade>
     );
 };
 

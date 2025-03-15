@@ -11,21 +11,21 @@ type WorksItemProps = {
     imageSrc: string
     title: string
     description: string
-
+site:string
 }
 
-export const WorkItem:React.FC<WorksItemProps> = ({imageSrc, title, description}: WorksItemProps) => {
+export const WorkItem:React.FC<WorksItemProps> = ({imageSrc, title, description,site}: WorksItemProps) => {
 
     return (
         <style.WorkItemStyles >
             <style.ImageWrapperSlider>
             <style.Image src={imageSrc} alt={''}></style.Image>
-                <Button>View Project</Button>
+                <Button >View Project</Button>
             </style.ImageWrapperSlider>
             <style.DescrWrapper>
             <ItemsTitle>{title}</ItemsTitle>
             <ItemsDescr>{description}</ItemsDescr>
-            <Link active href={'#'}>demo</Link>
+            <Link active href={site}>demo</Link>
             <Link active={false} href={'#'}>code</Link>
             </style.DescrWrapper>
         </style.WorkItemStyles>

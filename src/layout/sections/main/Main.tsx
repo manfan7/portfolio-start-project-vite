@@ -32,7 +32,7 @@ export const Main: React.FC = () => {
                     <Tilt className="parallax-effect-img background-stripes track-on-window"
                           tiltMaxAngleX={40}
                           tiltMaxAngleY={40}
-                          perspective={800}
+                          perspective={500}
                           transitionSpeed={1500}
                           scale={width>breakPoint? 1.03 : 1}
                           gyroscope={true}
@@ -41,7 +41,7 @@ export const Main: React.FC = () => {
                           glareMaxOpacity={0.75}
                           glarePosition="all"
                           trackOnWindow={true}
-                          glareBorderRadius="20px"
+                          glareBorderRadius="100px"
 
                     >
                         <style.PhotoWrapper>

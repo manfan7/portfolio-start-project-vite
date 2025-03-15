@@ -36,7 +36,7 @@ const TextStyled = styled.h1`
     &>span{
         display: none;
     }
-    @media ${theme.media.mobile} {
+    @media ${theme.media.tablet} {
         margin-bottom: 74px;
     }
 `

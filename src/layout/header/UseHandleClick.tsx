@@ -9,6 +9,7 @@ export const useHandleClick = () => {
     const handleOnclick = () => {
         setVisible(visible => !visible)
 
+
     }
     useEffect(() => {
 
@@ -21,7 +22,20 @@ export const useHandleClick = () => {
         return () => window.removeEventListener('resize', handleWindowResize)
 
     }, []);
+    useEffect(() => {
+        if (visible && width <=768) {
 
+            document.body.style.overflow = 'hidden';
+                    } else {
+
+            document.body.style.overflow = 'visible';
+        }
+
+
+        return () => {
+            document.body.style.overflow = 'visible';
+        };
+    }, [visible,width]);
     return {
         visible,
         handleOnclick, width, breakPoint

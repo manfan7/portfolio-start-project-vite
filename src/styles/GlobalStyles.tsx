@@ -36,6 +36,7 @@ export const GlobalStyles = createGlobalStyle`
       -moz-osx-font-smoothing: grayscale;
       min-width: 360px;
       scroll-behavior: smooth;
+     
    }
 
    

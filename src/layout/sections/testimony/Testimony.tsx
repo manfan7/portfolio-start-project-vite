@@ -28,7 +28,7 @@ export const Testimony:React.FC = () => {
     );
 };
 const StyledTestimony = styled.section`
-    position: relative;
+ position: relative;
     padding-bottom: 71px;
 ${style.IconWrapper} {
     margin:48px 0 67px;

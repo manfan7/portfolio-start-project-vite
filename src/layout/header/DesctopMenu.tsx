@@ -5,6 +5,7 @@ import {NavPropsTypes} from "./Header.tsx";
 
 export const DesctopHeader:React.FC<NavPropsTypes> = ({visible, onClick}:NavPropsTypes) => {
 
+
     return (
         <style.StyledHeader visible={visible}>
             <style.StyledButton onClick={onClick} tabIndex={1}>
