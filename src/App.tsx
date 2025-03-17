@@ -9,7 +9,7 @@ import {Slogan} from "./layout/sections/slogan/Slogan.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
 import {Partical} from "./components/partical/Partical.tsx";
 import {ScrollUp} from "./components/ScrollUp.tsx";
-import React from "react";
+
 
 import AnimatedCursor from "react-animated-cursor"
 

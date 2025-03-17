@@ -105,11 +105,6 @@ export const Works: React.FC = () => {
     const [currentFilterStatus, setCurrentFilterStatus] = useState('ALL')
 
     const [filteredItems, setFilteredItems] = useState([...worksInfo]);
-    const transition = {
-        duration: 0.8,
-
-
-    }
 
     function changeItems(value: string) {
         setCurrentFilterStatus(value)
@@ -128,7 +123,7 @@ export const Works: React.FC = () => {
                 <TabMenu menuItems={tabsItems} changeItems={changeItems} currentFilterStatus={currentFilterStatus}/>
 
                 <FlexWrapper justify={'space-between'} align={'normal'} wrap={'wrap'}>
-                    <AnimatePresence propagate>
+                    <AnimatePresence>
                         {filteredItems.map(({title, description, imageSrc,site}, index) => {
                             return (
 
@@ -138,12 +133,11 @@ export const Works: React.FC = () => {
                                     flexGrow: 1,
 
                                 }}
-                                            layout={true}
-                                            initial={{ y: 150, opacity: 0 }}
-                                            animate={{ y: 0, opacity: 1 }}
-                                            transition={transition}
-                                            exit={{ y: -150, opacity: 0 }}
-                                            key={index}
+                                            layout
+                                            initial={{ opacity: 0,y:100 }}
+                                            animate={{ opacity: 1,y:0 }}
+                                            exit={{ opacity: 0,y:100 }}
+                                            key={title}
 
 
                                 >

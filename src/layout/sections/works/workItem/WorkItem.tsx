@@ -20,7 +20,8 @@ export const WorkItem:React.FC<WorksItemProps> = ({imageSrc, title, description,
         <style.WorkItemStyles >
             <style.ImageWrapperSlider>
             <style.Image src={imageSrc} alt={''}></style.Image>
-                <Button >View Project</Button>
+                <a href={site}> <Button>View Project</Button></a>
+
             </style.ImageWrapperSlider>
             <style.DescrWrapper>
             <ItemsTitle>{title}</ItemsTitle>
