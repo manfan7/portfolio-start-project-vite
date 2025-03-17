@@ -35,6 +35,9 @@ importers:
       react-alice-carousel:
         specifier: ^2.9.1
         version: 2.9.1(react@18.3.1)
+      react-animated-cursor:
+        specifier: ^2.11.2
+        version: 2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-awesome-reveal:
         specifier: ^4.3.1
         version: 4.3.1(@emotion/react@11.14.0(@types/react@18.3.16)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1273,6 +1276,12 @@ packages:
     resolution: {integrity: sha512-/wQE4cqogKL/db+SoiiRmdj5j6C9I31pfzrmz8nuXmWmSl/UxxJz/O92W/ryxicTw1au+3mUW+drU3ZAhF3JPA==}
     peerDependencies:
       react: '>=15.4'
+
+  react-animated-cursor@2.11.2:
+    resolution: {integrity: sha512-LV0PtST61tdeW/chCqFt1JLp6i0d5fD9v2uradBcPAkKKCi2Iw7sAcD11ADS1TjXPPj9MOoD9YubEt++/IbZ+g==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
 
   react-awesome-reveal@4.3.1:
     resolution: {integrity: sha512-eMQqjNbk979ltKK/VUjw6+pGNa0Zg08ikCo7xCsi3BBX9sQSc2eVJMHXspEA/dS/1UiqFiZwgz19wlCL19+/qA==}
@@ -2731,6 +2740,11 @@ snapshots:
     dependencies:
       react: 18.3.1
       vanilla-swipe: 2.4.1
+
+  react-animated-cursor@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   react-awesome-reveal@4.3.1(@emotion/react@11.14.0(@types/react@18.3.16)(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:

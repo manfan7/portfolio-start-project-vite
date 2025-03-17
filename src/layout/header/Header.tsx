@@ -12,7 +12,7 @@ export type NavPropsTypes = {
     visible?: boolean
     onClick?: () => void
     active?:boolean
-    scrollHeight?: boolean
+    scrollHeight?: number
 }
 
 const navigationItems: Array<string> = ['Home', "Skills", 'Works', 'Testimony', 'Contact']

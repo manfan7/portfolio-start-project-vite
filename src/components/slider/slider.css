@@ -1,5 +1,6 @@
 .alice-carousel__dots-item {
     margin: 0;
+    cursor: none!important;
 }
 .alice-carousel__dots-item:not(.__custom){
     display: inline-block;

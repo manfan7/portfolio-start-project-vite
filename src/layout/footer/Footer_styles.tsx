@@ -20,7 +20,7 @@ const SocialList = styled.ul`
     position: relative;
 `
 const SocialLiItem = styled.li`
-    cursor: pointer;
+    
     &:hover a{
         background-color: ${theme.colors.itemsColor};
         color: ${theme.colors.primaryBg};

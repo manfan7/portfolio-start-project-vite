@@ -11,6 +11,7 @@ import {Partical} from "./components/partical/Partical.tsx";
 import {ScrollUp} from "./components/ScrollUp.tsx";
 import React from "react";
 
+import AnimatedCursor from "react-animated-cursor"
 
 
 
@@ -19,6 +20,11 @@ function App() {
 
     return (
         <div className="App">
+            <AnimatedCursor
+                color='118, 71, 120'
+                innerSize={22}
+
+            />
             <Partical/>
             <div>
                 <Header/>

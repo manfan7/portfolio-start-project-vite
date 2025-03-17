@@ -23,6 +23,7 @@ export const useHandleClick = () => {
 
     }, []);
     useEffect(() => {
+
         if (visible && width <=768) {
 
             document.body.style.overflow = 'hidden';
